@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN">
+<html>
+<head>
+<title>Karavanke</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="karavanke.js"></script>
+<style type="text/css">
+   
+    .pod1{
+        color:green;
+    }
+
+    .pod2{
+        color:blue;
+    }
+
+    .pod3{
+        color:red;
+    }
+    .pod1, .pod2, .pod3{
+        font-weight: bold;
+        text-align: right;
+    }
+
+</style>
+</head>
+<body>
+
+<h1>Karavanke</h1>
+<table>
+<script>
+
+    	var hrib=0
+        var ticsocak=0
+        var dvotisocak=0
+
+    //alert(hribi.length)
+    for(let i=0;i<hribi.length;i++){
+        document.write('<tr>')
+            document.write('<td>' + hribi[i][0] + '</td>')
+
+            if(hribi[i][1]<1000){
+            document.write('<td class="pod1">' + hribi[i][1] + ' m</td>')
+            hrib++ }
+
+            else if(hribi[i][1]>=1000 && hribi[i][1]<2000){
+            document.write('<td class="pod2">' + hribi[i][1] + ' m</td>')
+            ticsocak++  }
+
+            else if(hribi[i][1]>=2000){
+            document.write('<td class="pod3">' + hribi[i][1] + ' m</td>')
+            dvotisocak++  }   
+        
+            
+
+        
+            document.write('</tr>')
+    }
+
+    document.write("<tr> <td colspan='2'>" + 
+        "<p>Število hribov je:" + hrib + "</p>"+
+        "<p>Število tisočakov je: " + ticsocak + "</p>" +
+        "<p>Število dvotisočakov je: " + dvotisocak + "</p>"+ 
+        "</td></tr>")
+
+   /* document.write('<tr>')
+        document.write('<td>')
+    document.write("Število hribov je:" + hrib)
+    document.write('</td>')
+    document.write('</tr>')
+    document.write('<tr>')
+        document.write('<td>')
+    document.write("Število tisočakov je:" + ticsocak)
+    document.write('</td>')
+    document.write('</tr>')
+    document.write('<tr>')
+        document.write('<td>')
+    document.write("Število dvotisočakov je:" + dvotisocak)
+    document.write('</td>')
+    document.write('</tr>')*/
+    
+</script>
+</table>
+</body>
+</html>

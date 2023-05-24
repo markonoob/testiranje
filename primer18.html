@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN">
+<html>
+<head>
+<title>Primer 18 - podobno kot 17, dodani tipki start, stor</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+   img { position: relative }
+</style>
+</head>
+<body onload="setInterval(avto)">
+
+<p><img id="avto" src="avto1.jpg" alt="Avto" /></p>
+<form action="">
+<div>
+   <input type="button" value="levo" onclick="dx=-1" />
+   <input type="button" value="desno" onclick="dx=1"/>
+   <input type="button" value="start" onclick="koda = setInterval(premik,20)"  />
+   <input type="button" value="stop"  onclick="clearInterval(koda)"/>
+</div>
+</form>
+
+<script>
+
+var x=0
+       var dx=1
+   var avto= document.getElementById('avto')
+
+   function premik (){
+      let n= document.body.clientWidth- avto.width
+      x= x+dx
+      if(x<0)dx=1    //x=0
+
+      if(x>n) dx-=1  //x=n
+
+      avto.style.left= x+ "px"
+     
+   }
+
+
+</script>
+
+</body>
+</html>

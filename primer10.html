@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN">
+<html>
+<head>
+<title>Primer 10 - sliki na dogodek on click spremeni velikost, onmouseover, onmouseout</title>
+<meta charset=utf-8/>
+<style type="text/css">
+   #avto2 { position: absolute }
+   #avto3 { margin-top: 170px }
+</style>
+</head>
+<body>
+
+<p><img id="avto1" src="avto1.jpg" alt="Avto" title="Opis slike"
+   onclick="width=300; height=500"  /></p>
+<p><img id="avto2" src="avto2.jpg" alt="Avto" 
+   onmouseover="width+=100" onmouseout="width-=100" onclick="alert(width +', ' + height)"/></p>
+<p><img id="avto3" src="avto3.jpg" alt="Avto" 
+   onmouseover="src='avto4.jpg'" onmouseout="src='avto3.jpg'"/></p>
+
+</body>
+</html>

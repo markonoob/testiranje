@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN">
+<html>
+<head>
+<title>Štetje slončkov</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="">
+
+<h1>Štetje slončkov</h1>
+
+<form action="">
+<div>
+<input type="text" readonly="readonly" id="sloni" />
+</div>
+</form>
+
+<script>
+
+var slon = 0
+var sloni= document.getElementById("sloni")
+sloni.value="0 slonov"
+
+var koda= setTimeout(stej,700)
+
+function stej() {
+     
+    slon++
+    sloni.value= slon
+    koda = setTimeout(stej,700)
+    if(slon%100==1)
+    sloni.value= slon +" slon"
+
+    else if(slon%100==2)
+    sloni.value= slon +" slona"
+
+    else if(slon%100==3 || slon%100==4)
+    sloni.value= slon +" sloni"
+    
+    else
+    sloni.value= slon +" slonov"
+
+}
+	
+
+</script>
+
+</body>
+</html>

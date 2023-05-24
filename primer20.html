@@ -1,0 +1,51 @@
+<!DOCTYPE html >
+<html>
+<head>
+<title>Primer 20 - podobno kot prej, dodaj spremembo hitrosti</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+   img { position: relative }
+</style>
+</head>
+<body>
+
+<p><img id="avto" src="avto4.jpg" alt="Avto" /></p>
+<form action="">
+<div>
+   <input type="button" value="levo"  onclick="dx=-1"/>
+   <input type="button" value="desno" onclick="dx=1" />
+   <input type="button" value="start" onclick="koda=setTimeout(premik,20)" />
+   <input type="button" value="stop" onclick="clearTimeout(koda)"/>
+   <input type="button" value="hitreje" onclick="if(cas>10)cas-=10" />
+   <input type="button" value="počasneje" onclick="cas+=10" />
+</div>
+</form>
+
+<script>
+
+   var koda =[]
+
+       var x=0
+       var dx=1
+       var cas=30
+
+   var avto= document.getElementById('avto')
+
+   function premik (){
+      let n= document.body.clientWidth- avto.width
+      x= x+dx
+      if(x<0)dx=1    //x=0
+
+      if(x>n) dx-=1  //x=n
+
+      avto.style.left= x+ "px"
+
+      koda=setTimeout(premik,cas)
+     
+   }
+
+
+</script>
+
+</body>
+</html>

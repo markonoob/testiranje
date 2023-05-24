@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN">
+<html>
+<head>
+<title>Primer 15 - avto se premika v desno</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+   img { position: relative }
+</style>
+</head>
+<body onload="setInterval(premik, 30)">
+
+
+<p><img id="avto" src="avto1.jpg" alt="Avto" /></p>
+
+<script >
+   var x=0
+   var avto= document.getElementById('avto')
+
+   function premik (){
+      x++
+      avto.style.left= x + "px"
+
+   }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+   <html>
+      <head>
+      <title>Primer 14 - v selectu izberi avto, ki ga prikaže</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      </head>
+         <body>
+
+         <form action="">
+         <div>
+            <select onchange="spremeni(selectedIndex)">
+               <option>Aslo Martin</option>
+               <option>Mercedes</option>
+               <option>BMW</option>
+               <option>Porsche</option>
+            </select>
+         </div>
+         </form>
+
+         <p><img id="avto" src="avto1.jpg" alt="Avto"/></p>
+
+         <script>
+            var tab=[]
+            
+            for(var i=1;i<=4;i++){
+               var obj= new Image()
+               obj.src= "avto" + i + ".jpg" 
+               tab.push(obj)
+            }
+
+            var avto= document.getElementById('avto')
+
+            function spremeni(i){
+            
+            avto.src= tab[i].src
+            }
+
+         </script>
+
+         </body>
+</html>

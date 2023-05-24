@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Primer 11 - onclick menja avto</title>
+<meta charset=utf-8 />
+</head>
+<body>
+
+<p><img src="avto1.jpg" alt="Avto" onclick="spremeni(this)" /></p>
+<p><img src="avto1.jpg" alt="Avto" onclick="spremeni1(this)" /></p>
+<script>
+
+    var slika=1
+    // 11.in 12. naloga sta skupaj
+    function spremeni(element){
+        element.src= "avto"+ slika +".jpg"
+        slika= 3- slika
+    }
+        //12.naloga ()naključno izbiraj slike src:
+    var slika1=1
+
+    function spremeni1(element){
+        slika1= Math.floor(Math.random()*4+1)
+        element.src= "avto"+ slika1 +".jpg"
+    }
+
+</script>
+
+</body>
+</html>
