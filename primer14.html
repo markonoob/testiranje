@@ -23,9 +23,9 @@
             var tab=[]
             
             for(var i=1;i<=4;i++){
-               var obj= new Image()
-               obj.src= "avto" + i + ".jpg" 
-               tab.push(obj)
+               let obj= new Image()
+               obj.src= "avto"+i+".jpg"
+               avto.push(obj) // tudi to je vredu: avto[i-1]= obj
             }
 
             var avto= document.getElementById('avto')
